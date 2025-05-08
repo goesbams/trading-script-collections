@@ -1,0 +1,13 @@
+//@version=3
+study("Strong Marubozu", overlay=true)
+
+//input variables
+marubozuBodyHeight = input(title="Marubozu Body, Min Height (Pips)",type=integer,minval=1,maxval=100,step=1,defval=10,confirm=false)
+
+//scanner algorithms
+bullMarubozu = (close > open) and (high == close) and (low == open)
+bearMarubozu = (close < open) and (high == open) and (low == close)
+
+//chart plotters
+plotshape(bullMarubozu, style=shape.triangleup, location=location.abovebar, color=green, size=size.tiny)
+plotshape(bearMarubozu, style=shape.triangledown, location=location.belowbar, color=red, size=size.tiny)
