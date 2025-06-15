@@ -1,5 +1,5 @@
 //@version=5
-indicator('4H Delta ZigZag', shorttitle='4H Delta ZigZag', max_labels_count=500, max_lines_count=500, overlay=true)
+indicator('4H Delta ZigZag', shorttitle='4H Delta ZigZag', max_labels_count=500, max_lines_count=500, overlay=true, max_bars_back=5000)
 
 //------------------------------------------------------------------------------
 // Settings
